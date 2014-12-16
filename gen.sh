@@ -6,7 +6,7 @@ do
 	#Latex kapittel pr undermappe
 	echo "\\chapter{$folder}"
 
-	find ./sourcefiles/$folder | grep .cs > sourcecode.txt
+	find ./sourcefiles/$folder -type f > sourcecode.txt
 
 	while read line           
 	do
