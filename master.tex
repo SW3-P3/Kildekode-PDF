@@ -1,0 +1,81 @@
+\documentclass[landscape, 11pt]{report}
+	
+\usepackage[landscape]{geometry}
+%% PREAMBLE STUFF
+% Fix various issues with LaTeX2e
+\usepackage{fixltx2e}
+% Font package
+\usepackage{fourier}
+% Index
+\usepackage{makeidx}
+\makeindex
+
+
+%%% Translations and character encodings %%%
+% Enable use of several characters, including æ, ø and å
+%\usepackage[utf8]{inputenc}
+% Danish language
+\usepackage[danish]{babel}
+% Use PostScript fonts instead of bitmap ones. Also does other stuff.
+\usepackage[T1]{fontenc}
+% Various LaTeX symbols
+\usepackage{latexsym}
+% Wider selection of colours
+\usepackage[table]{xcolor}
+% Improved element justification
+\usepackage{ragged2e}
+% Font improvements
+\usepackage{fix-cm}
+% Enables inclusion of PDF files
+\usepackage{pdfpages}
+% Enables various forms of lines, like double-underlining (\uuline{})
+\usepackage[normalem,normalbf]{ulem}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage[bookmarks]{hyperref}
+
+
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\usepackage{courier}
+
+\usepackage{listings}
+\lstset{language=[Sharp]C,
+  captionpos=b,            
+  columns=fixed,     
+  numbers=left,
+  numberstyle=\tiny,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  inputencoding=utf8,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  escapeinside={(*@}{@*)},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords},
+  stringstyle=\color{redstrings},
+  basicstyle=\ttfamily\small,
+  literate={ø}{{\o}}1
+  		   {æ}{{\ae}}1
+  		   {å}{{\aa}}1
+  		   {Ø}{{\O}}1
+  		   {Æ}{{\AE}}1
+  		   {Å}{{\AA}}1
+}
+
+\lstdefinestyle{make}{tabsize=4}
+
+%% END PREAMBLE STUFF
+
+\begin{document}
+%\thispagestyle{empty}
+\chapter{Kildekode}
+Dette er relevante udsnit af kildekoden til projektet \textbf{ProjectFood}, lavet af gruppen \textbf{DS304E14}.
+\tableofcontents
+\clearpage
+\input{sourcecode.tex}
+\end{document}
